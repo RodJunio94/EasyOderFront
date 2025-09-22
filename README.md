@@ -1,27 +1,63 @@
 # EasyOderFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+Frontend do sistema EasyOrder desenvolvido em Angular. Este projeto está em **construção** e será atualizado conforme o desenvolvimento progride.
 
-## Development server
+## 🚧 Status do Projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+**EM CONSTRUÇÃO** - Este projeto está em desenvolvimento ativo e será atualizado regularmente.
 
-## Code scaffolding
+## 📋 O que foi implementado até agora
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- ✅ Configuração inicial do projeto Angular
+- ✅ Estrutura básica com componentes standalone
+- ✅ Configuração do HttpClient para comunicação com API
+- ✅ Modelo de dados para Product
+- ✅ Integração inicial com API backend (localhost:7110)
+- ✅ Implementação de listagem de produtos
 
-## Build
+## 🛠️ Como usar
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Pré-requisitos
+- Node.js (versão 16 ou superior)
+- Angular CLI
+- Backend da API rodando em `https://localhost:7110`
 
-## Running unit tests
+### Instalação e execução
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone o repositório
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-## Running end-to-end tests
+3. Execute o servidor de desenvolvimento:
+   ```bash
+   ng serve
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Acesse a aplicação em `http://localhost:4200/`
 
-## Further help
+### Comandos úteis
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- `ng serve` - Inicia o servidor de desenvolvimento
+- `ng build` - Compila o projeto para produção
+- `ng test` - Executa os testes unitários
+- `ng generate component nome-do-componente` - Gera um novo componente
+
+## 🔧 Tecnologias utilizadas
+
+- Angular 16+
+- TypeScript
+- RxJS
+- HttpClient
+- SCSS
+
+## 📝 Próximos passos
+
+- [ ] CRUD de Customer
+- [ ] CRUD de Order  
+- [ ] CRUD de Product
+
+---
+
+**Nota**: Este README será atualizado conforme novas funcionalidades forem implementadas.
