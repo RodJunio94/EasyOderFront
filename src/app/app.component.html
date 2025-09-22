@@ -1,7 +1,23 @@
-<p *ngFor="let product of products$ | async">
-  {{ product.name }}
-  {{ product.description }}
-  {{ product.price }}
-  {{ product.stockQuantity }}
-  {{ product.createdAt }}
-</p>
+<div *ngIf="!router.url.includes('/product/')">
+  <form (submit)="$event.preventDefault(); CreateProduct({ name: name.value, description: description.value, price: price.valueAsNumber, stockQuantity: stockQuantity.valueAsNumber })">
+    <input #name placeholder="Nome" />
+    <input #description placeholder="Descrição" />
+    <input #price type="number" step="0.01" placeholder="Preço" />
+    <input #stockQuantity type="number" placeholder="Quantidade em estoque" />
+    <button type="submit" [disabled]="isCreating">{{ isCreating ? 'Criando...' : 'Criar Produto' }}</button>
+  </form>
+
+  <div *ngIf="lastCreatedId">ID criado: {{ lastCreatedId }}</div>
+
+  <p *ngFor="let product of products$ | async">
+    <a [routerLink]="['/product', product.id]">{{ product.name }}</a>
+    {{ product.description }}
+    {{ product.price }}
+    {{ product.stockQuantity }}
+    {{ product.createdAt }}
+    <button (click)="DeleteProduct(product.id)" [disabled]="deletingId === product.id">{{ deletingId === product.id ? 'Deletando...' : 'Deletar' }}</button>
+    <small style="color: red;">ID: {{ product.id }}</small>
+  </p>
+</div>
+
+<router-outlet></router-outlet>
